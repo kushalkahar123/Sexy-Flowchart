@@ -7,6 +7,14 @@ function App() {
   const [flowchartData, setFlowChartData] = useState(null); 
 
   useEffect(() => {
+    const fetchFlowchart = async () => {
+        const response = await fetch('http://localhost:3000/'); 
+        // ...rest of your code 
+    };
+    fetchFlowchart();
+  }, []);
+
+  useEffect(() => {
     // ... your fetch logic that will eventually contact the backend
     const flowchartData = {
       id: 'sampleFlowchart1',
